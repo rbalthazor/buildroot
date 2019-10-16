@@ -27,7 +27,7 @@ define ODE_PAYLOAD_BUILD_CMDS
 endef
 
 define ODE_PAYLOAD_INSTALL_TARGET_CMDS
-   $(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D) INC_PATH=$(STAGING_DIR)/usr/include LIB_PATH=$(TARGET_DIR)/usr/local/lib BIN_PATH=$(TARGET_DIR)/root SBIN_PATH=$(TARGET_DIR)/usr/local/sbin ETC_PATH=$(TARGET_DIR)/usr/local/etc LOCAL_BIN_PATH=$(TARGET_DIR)/root LOCAL_SBIN_PATH=$(TARGET_DIR)/usr/local/sbin install
+   $(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D) INC_PATH=$(STAGING_DIR)/usr/include LIB_PATH=$(TARGET_DIR)/usr/local/lib BIN_PATH=$(TARGET_DIR)/usr/bin SBIN_PATH=$(TARGET_DIR)/usr/local/sbin ETC_PATH=$(TARGET_DIR)/usr/local/etc LOCAL_BIN_PATH=$(TARGET_DIR)/usr/bin LOCAL_SBIN_PATH=$(TARGET_DIR)/usr/local/sbin install
 endef
 
 $(eval $(call GENTARGETS,package,ode_payload))
